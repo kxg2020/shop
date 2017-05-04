@@ -1,0 +1,614 @@
+[ 2016-09-06T08:41:19+08:00 ]  
+ERR: Redis server went away
+
+[ 2016-09-06T08:59:39+08:00 ] 127.0.0.1 /Goods/getClicks/goods_id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-06T08:59:40+08:00 ] 127.0.0.1 /Goods/getContent/goods_id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_content` [ RunTime:0.0480s ]
+SQL: SELECT * FROM `shop_goods_content` WHERE `goods_id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2016-09-06T08:59:49+08:00 ] 127.0.0.1 /Goods/getClicks/goods_id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-09-06T08:59:50+08:00 ] 127.0.0.1 /Goods/getContent/goods_id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_content` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `shop_goods_content` WHERE `goods_id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2016-09-06T08:59:55+08:00 ] 127.0.0.1 /Goods/getClicks/goods_id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-09-06T08:59:56+08:00 ] 127.0.0.1 /Goods/getContent/goods_id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_content` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `shop_goods_content` WHERE `goods_id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2016-09-06T08:59:58+08:00 ] 127.0.0.1 /Cart/getCateByIndex.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_cart` [ RunTime:0.0330s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2016-09-06T09:14:50+08:00 ] 127.0.0.1 /Cart/getCateByIndex.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_cart` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2016-09-06T10:31:45+08:00 ] 127.0.0.1 /Order/flow2.html
+ERR: 1054:Unknown column 'b.intro' in 'field list'
+ [ SQL语句 ] : SELECT a.*,b.name,b.image,b.intro,b.shop_price,b.stock FROM shop_cart as a INNER JOIN shop_goods as b on b.id=a.goods_id  WHERE a.user_id = '4' 
+
+[ 2016-09-06T11:08:54+08:00 ] 127.0.0.1 /Order/submit.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = 'dc1c255f48ba2acd8b898fcf8db1d006' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-06T11:21:49+08:00 ] 127.0.0.1 /Cart/getCateByIndex.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = 'dc1c255f48ba2acd8b898fcf8db1d006' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_cart` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `shop_cart` [ RunTime:0.0050s ]
+SQL: SELECT a.*,b.name,b.image,b.sn FROM shop_cart as a LEFT JOIN shop_goods as b on b.id=a.goods_id  WHERE a.user_id = null  [ RunTime:0.0000s ]
+
+[ 2016-09-06T11:24:21+08:00 ] 127.0.0.1 /Order/submit.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-06T11:35:22+08:00 ] 127.0.0.1 /Order/submit.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_user_address` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `shop_user_address` [ RunTime:0.0080s ]
+SQL: SELECT a.name,a.phone,a.address detail_address,b.name province_name,c.name city_name,d.name area_name FROM shop_user_address as a INNER JOIN shop_locations as b on b.id=a.p_id INNER JOIN shop_locations as c on c.id=a.c_id INNER JOIN shop_locations as d on d.id=a.a_id  WHERE a.user_id = '4' AND a.id = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-09-06T11:35:39+08:00 ] 127.0.0.1 /Order/submit.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_user_address` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `shop_user_address` [ RunTime:0.0070s ]
+SQL: SELECT a.name,a.phone,a.address detail_address,b.name province_name,c.name city_name,d.name area_name FROM shop_user_address as a INNER JOIN shop_locations as b on b.id=a.p_id INNER JOIN shop_locations as c on c.id=a.c_id INNER JOIN shop_locations as d on d.id=a.a_id  WHERE a.user_id = '4' AND a.id = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-09-06T11:40:34+08:00 ] 127.0.0.1 /Order/submit.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_user_address` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `shop_user_address` [ RunTime:0.0050s ]
+SQL: SELECT a.name,a.phone,a.address detail_address,b.name province_name,c.name city_name,d.name area_name FROM shop_user_address as a INNER JOIN shop_locations as b on b.id=a.p_id INNER JOIN shop_locations as c on c.id=a.c_id INNER JOIN shop_locations as d on d.id=a.a_id  WHERE a.user_id = '4' AND a.id = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_delivery` [ RunTime:0.0050s ]
+SQL: SELECT id delivery_id,name delivery_name,price delivery_price FROM `shop_delivery` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-06T11:43:15+08:00 ] 127.0.0.1 /Order/submit.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_user_address` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `shop_user_address` [ RunTime:0.0040s ]
+SQL: SELECT a.name,a.phone,a.address detail_address,b.name province_name,c.name city_name,d.name area_name FROM shop_user_address as a INNER JOIN shop_locations as b on b.id=a.p_id INNER JOIN shop_locations as c on c.id=a.c_id INNER JOIN shop_locations as d on d.id=a.a_id  WHERE a.user_id = '4' AND a.id = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_delivery` [ RunTime:0.0050s ]
+SQL: SELECT id delivery_id,name delivery_name,price delivery_price FROM `shop_delivery` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_payment` [ RunTime:0.0060s ]
+SQL: SELECT id pay_type_id,name pay_type_name FROM `shop_payment` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-06T11:46:40+08:00 ] 127.0.0.1 /Order/submit.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_user_address` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `shop_user_address` [ RunTime:0.0040s ]
+SQL: SELECT a.name,a.phone,a.address detail_address,b.name province_name,c.name city_name,d.name area_name FROM shop_user_address as a INNER JOIN shop_locations as b on b.id=a.p_id INNER JOIN shop_locations as c on c.id=a.c_id INNER JOIN shop_locations as d on d.id=a.a_id  WHERE a.user_id = '4' AND a.id = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_delivery` [ RunTime:0.0050s ]
+SQL: SELECT id delivery_id,name delivery_name,price delivery_price FROM `shop_delivery` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_payment` [ RunTime:0.0050s ]
+SQL: SELECT id pay_type_id,name pay_type_name FROM `shop_payment` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_cart` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `shop_cart` [ RunTime:0.0050s ]
+SQL: SELECT a.*,b.name,b.image,b.sn,b.shop_price FROM shop_cart as a LEFT JOIN shop_goods as b on b.id=a.goods_id  WHERE a.user_id = '4'  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-09-06T14:20:56+08:00 ] 127.0.0.1 /Order/submit.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_user_address` [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `shop_user_address` [ RunTime:0.0190s ]
+SQL: SELECT a.name,a.phone,a.address detail_address,b.name province_name,c.name city_name,d.name area_name FROM shop_user_address as a INNER JOIN shop_locations as b on b.id=a.p_id INNER JOIN shop_locations as c on c.id=a.c_id INNER JOIN shop_locations as d on d.id=a.a_id  WHERE a.user_id = '4' AND a.id = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `shop_delivery` [ RunTime:0.0190s ]
+SQL: SELECT id delivery_id,name delivery_name,price delivery_price FROM `shop_delivery` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_payment` [ RunTime:0.0210s ]
+SQL: SELECT id pay_type_id,name pay_type_name FROM `shop_payment` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_cart` [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `shop_cart` [ RunTime:0.0100s ]
+SQL: SELECT a.*,b.name,b.image,b.sn,b.shop_price,b.stock FROM shop_cart as a LEFT JOIN shop_goods as b on b.id=a.goods_id  WHERE a.user_id = '4'  [ RunTime:0.0020s ]
+
+[ 2016-09-06T14:21:37+08:00 ] 127.0.0.1 /Order/submit.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_user_address` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `shop_user_address` [ RunTime:0.0070s ]
+SQL: SELECT a.name,a.phone,a.address detail_address,b.name province_name,c.name city_name,d.name area_name FROM shop_user_address as a INNER JOIN shop_locations as b on b.id=a.p_id INNER JOIN shop_locations as c on c.id=a.c_id INNER JOIN shop_locations as d on d.id=a.a_id  WHERE a.user_id = '4' AND a.id = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_delivery` [ RunTime:0.0070s ]
+SQL: SELECT id delivery_id,name delivery_name,price delivery_price FROM `shop_delivery` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_payment` [ RunTime:0.0060s ]
+SQL: SELECT id pay_type_id,name pay_type_name FROM `shop_payment` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_cart` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `shop_cart` [ RunTime:0.0060s ]
+SQL: SELECT a.*,b.name,b.image,b.sn,b.shop_price,b.stock FROM shop_cart as a LEFT JOIN shop_goods as b on b.id=a.goods_id  WHERE a.user_id = '4'  [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.name,b.image,b.sn,b.shop_price,b.stock FROM shop_cart as a LEFT JOIN shop_goods as b on b.id=a.goods_id  WHERE a.user_id = '4'  [ RunTime:0.0000s ]
+
+[ 2016-09-06T14:40:26+08:00 ] 127.0.0.1 /Order/submit.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_user_address` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `shop_user_address` [ RunTime:0.0060s ]
+SQL: SELECT a.name,a.phone,a.address detail_address,b.name province_name,c.name city_name,d.name area_name FROM shop_user_address as a INNER JOIN shop_locations as b on b.id=a.p_id INNER JOIN shop_locations as c on c.id=a.c_id INNER JOIN shop_locations as d on d.id=a.a_id  WHERE a.user_id = '4' AND a.id = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_delivery` [ RunTime:0.0060s ]
+SQL: SELECT id delivery_id,name delivery_name,price delivery_price FROM `shop_delivery` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_payment` [ RunTime:0.0070s ]
+SQL: SELECT id pay_type_id,name pay_type_name FROM `shop_payment` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_cart` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `shop_cart` [ RunTime:0.0060s ]
+SQL: SELECT a.*,b.name,b.image,b.sn,b.shop_price,b.stock FROM shop_cart as a LEFT JOIN shop_goods as b on b.id=a.goods_id  WHERE a.user_id = '4'  [ RunTime:0.0010s ]
+
+[ 2016-09-06T14:40:39+08:00 ] 127.0.0.1 /Order/submit.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_user_address` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `shop_user_address` [ RunTime:0.0070s ]
+SQL: SELECT a.name,a.phone,a.address detail_address,b.name province_name,c.name city_name,d.name area_name FROM shop_user_address as a INNER JOIN shop_locations as b on b.id=a.p_id INNER JOIN shop_locations as c on c.id=a.c_id INNER JOIN shop_locations as d on d.id=a.a_id  WHERE a.user_id = '4' AND a.id = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_delivery` [ RunTime:0.0060s ]
+SQL: SELECT id delivery_id,name delivery_name,price delivery_price FROM `shop_delivery` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_payment` [ RunTime:0.0070s ]
+SQL: SELECT id pay_type_id,name pay_type_name FROM `shop_payment` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_cart` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `shop_cart` [ RunTime:0.0080s ]
+SQL: SELECT a.*,b.name,b.image,b.sn,b.shop_price,b.stock FROM shop_cart as a LEFT JOIN shop_goods as b on b.id=a.goods_id  WHERE a.user_id = '4'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_order` [ RunTime:0.0060s ]
+SQL: INSERT INTO `shop_order` (`user_id`,`create_time`,`name`,`phone`,`detail_address`,`province_name`,`city_name`,`area_name`,`delivery_id`,`delivery_name`,`delivery_price`,`pay_type_id`,`pay_type_name`,`price`) VALUES ('4','1473144039','大涛哥','13800138000','春熙路1号','黑龙江省','齐齐哈尔市','梅里斯达斡尔族区','1','普通快递','15.00','1','支付宝','4020.5') [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_order_item` [ RunTime:0.0060s ]
+SQL: INSERT INTO `shop_order_item` (`order_id`,`goods_id`,`goods_name`,`goods_image`,`goods_price`,`amount`,`total_price`) VALUES ('1','1','黄导','http://ocavymzvy.bkt.clouddn.com//2016-08-25_57be5c82ceecc.jpg','0.50','41','20.5'),('1','2','手机','http://ocavymzvy.bkt.clouddn.com//2016-08-26_57bf9d4c1668d.jpg','2000.00','2','4000') [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0080s ]
+NOTIC: [8] Undefined index: goods_id F:\phpStudy\WWW\shop\Application\Home\Model\GoodsModel.class.php 第 11 行.
+SQL: UPDATE `shop_goods` SET `stock`=stock-41 [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: goods_id F:\phpStudy\WWW\shop\Application\Home\Model\GoodsModel.class.php 第 11 行.
+SQL: UPDATE `shop_goods` SET `stock`=stock-2 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_cart` [ RunTime:0.0080s ]
+SQL: DELETE FROM `shop_cart` WHERE `user_id` = 4 [ RunTime:0.0210s ]
+
+[ 2016-09-06T14:40:40+08:00 ] 127.0.0.1 /Order/ok/orderid/1.html
+ERR: 非法操作:ok
+
+[ 2016-09-06T14:43:52+08:00 ] 127.0.0.1 /Goods/getClicks/goods_id/1.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2016-09-06T14:43:59+08:00 ] 127.0.0.1 /Goods/getClicks/goods_id/1.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2016-09-06T14:44:04+08:00 ] 127.0.0.1 /Goods/getClicks/goods_id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2016-09-06T14:44:09+08:00 ] 127.0.0.1 /Goods/getContent/goods_id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_content` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `shop_goods_content` WHERE `goods_id` = 2 LIMIT 1   [ RunTime:0.0040s ]
+
+[ 2016-09-06T14:44:29+08:00 ] 127.0.0.1 /Cart/getCateByIndex.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_cart` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `shop_cart` [ RunTime:0.0060s ]
+SQL: SELECT a.*,b.name,b.image,b.sn,b.shop_price,b.stock FROM shop_cart as a LEFT JOIN shop_goods as b on b.id=a.goods_id  WHERE a.user_id = '4'  [ RunTime:0.0000s ]
+
+[ 2016-09-06T14:45:16+08:00 ] 127.0.0.1 /Order/submit.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_user_address` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `shop_user_address` [ RunTime:0.0060s ]
+SQL: SELECT a.name,a.phone,a.address detail_address,b.name province_name,c.name city_name,d.name area_name FROM shop_user_address as a INNER JOIN shop_locations as b on b.id=a.p_id INNER JOIN shop_locations as c on c.id=a.c_id INNER JOIN shop_locations as d on d.id=a.a_id  WHERE a.user_id = '4' AND a.id = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_delivery` [ RunTime:0.0080s ]
+SQL: SELECT id delivery_id,name delivery_name,price delivery_price FROM `shop_delivery` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_payment` [ RunTime:0.0080s ]
+SQL: SELECT id pay_type_id,name pay_type_name FROM `shop_payment` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_cart` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `shop_cart` [ RunTime:0.0070s ]
+SQL: SELECT a.*,b.name,b.image,b.sn,b.shop_price,b.stock FROM shop_cart as a LEFT JOIN shop_goods as b on b.id=a.goods_id  WHERE a.user_id = '4'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_order` [ RunTime:0.0060s ]
+SQL: INSERT INTO `shop_order` (`user_id`,`create_time`,`name`,`phone`,`detail_address`,`province_name`,`city_name`,`area_name`,`delivery_id`,`delivery_name`,`delivery_price`,`pay_type_id`,`pay_type_name`,`price`) VALUES ('4','1473144316','大涛哥','13800138000','春熙路1号','黑龙江省','齐齐哈尔市','梅里斯达斡尔族区','2','顺丰','22.00','1','支付宝','10001') [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_order_item` [ RunTime:0.0050s ]
+SQL: INSERT INTO `shop_order_item` (`order_id`,`goods_id`,`goods_name`,`goods_image`,`goods_price`,`amount`,`total_price`) VALUES ('2','2','手机','http://ocavymzvy.bkt.clouddn.com//2016-08-26_57bf9d4c1668d.jpg','2000.00','5','10000'),('2','1','黄导','http://ocavymzvy.bkt.clouddn.com//2016-08-25_57be5c82ceecc.jpg','0.50','2','1') [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0090s ]
+SQL: UPDATE `shop_goods` SET `stock`=stock-5 [ RunTime:0.0010s ]
+SQL: UPDATE `shop_goods` SET `stock`=stock-2 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_cart` [ RunTime:0.0100s ]
+SQL: DELETE FROM `shop_cart` WHERE `user_id` = 4 [ RunTime:0.0010s ]
+
+[ 2016-09-06T14:45:17+08:00 ] 127.0.0.1 /Order/ok/orderid/2.html
+ERR: 非法操作:ok
+
+[ 2016-09-06T14:46:38+08:00 ] 127.0.0.1 /Goods/getClicks/goods_id/1.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2016-09-06T14:46:38+08:00 ] 127.0.0.1 /Goods/getContent/goods_id/1.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_content` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `shop_goods_content` WHERE `goods_id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2016-09-06T14:46:47+08:00 ] 127.0.0.1 /Goods/getClicks/goods_id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0020s ]
+
+[ 2016-09-06T14:46:47+08:00 ] 127.0.0.1 /Goods/getContent/goods_id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_goods_content` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `shop_goods_content` WHERE `goods_id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2016-09-06T14:46:53+08:00 ] 127.0.0.1 /Goods/getClicks/goods_id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2016-09-06T14:46:53+08:00 ] 127.0.0.1 /Goods/getContent/goods_id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_goods_content` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `shop_goods_content` WHERE `goods_id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2016-09-06T14:46:54+08:00 ] 127.0.0.1 /Cart/getCateByIndex.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_cart` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `shop_cart` [ RunTime:0.0090s ]
+SQL: SELECT a.*,b.name,b.image,b.sn,b.shop_price,b.stock FROM shop_cart as a LEFT JOIN shop_goods as b on b.id=a.goods_id  WHERE a.user_id = '4'  [ RunTime:0.0030s ]
+
+[ 2016-09-06T14:47:06+08:00 ] 127.0.0.1 /Order/submit.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `shop_user_address` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `shop_user_address` [ RunTime:0.0130s ]
+SQL: SELECT a.name,a.phone,a.address detail_address,b.name province_name,c.name city_name,d.name area_name FROM shop_user_address as a INNER JOIN shop_locations as b on b.id=a.p_id INNER JOIN shop_locations as c on c.id=a.c_id INNER JOIN shop_locations as d on d.id=a.a_id  WHERE a.user_id = '4' AND a.id = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_delivery` [ RunTime:0.0090s ]
+SQL: SELECT id delivery_id,name delivery_name,price delivery_price FROM `shop_delivery` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_payment` [ RunTime:0.0090s ]
+SQL: SELECT id pay_type_id,name pay_type_name FROM `shop_payment` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_cart` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `shop_cart` [ RunTime:0.0090s ]
+SQL: SELECT a.*,b.name,b.image,b.sn,b.shop_price,b.stock FROM shop_cart as a LEFT JOIN shop_goods as b on b.id=a.goods_id  WHERE a.user_id = '4'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_order` [ RunTime:0.0090s ]
+SQL: INSERT INTO `shop_order` (`user_id`,`create_time`,`name`,`phone`,`detail_address`,`province_name`,`city_name`,`area_name`,`delivery_id`,`delivery_name`,`delivery_price`,`pay_type_id`,`pay_type_name`,`price`) VALUES ('4','1473144426','大涛哥','13800138000','春熙路1号','黑龙江省','齐齐哈尔市','梅里斯达斡尔族区','1','普通快递','15.00','1','支付宝','2000.5') [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_order_item` [ RunTime:0.0090s ]
+SQL: INSERT INTO `shop_order_item` (`order_id`,`goods_id`,`goods_name`,`goods_image`,`goods_price`,`amount`,`total_price`) VALUES ('3','2','手机','http://ocavymzvy.bkt.clouddn.com//2016-08-26_57bf9d4c1668d.jpg','2000.00','1','2000'),('3','1','黄导','http://ocavymzvy.bkt.clouddn.com//2016-08-25_57be5c82ceecc.jpg','0.50','1','0.5') [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0120s ]
+
+[ 2016-09-06T14:47:50+08:00 ] 127.0.0.1 /Order/submit.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_user_address` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `shop_user_address` [ RunTime:0.0070s ]
+SQL: SELECT a.name,a.phone,a.address detail_address,b.name province_name,c.name city_name,d.name area_name FROM shop_user_address as a INNER JOIN shop_locations as b on b.id=a.p_id INNER JOIN shop_locations as c on c.id=a.c_id INNER JOIN shop_locations as d on d.id=a.a_id  WHERE a.user_id = '4' AND a.id = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_delivery` [ RunTime:0.0080s ]
+SQL: SELECT id delivery_id,name delivery_name,price delivery_price FROM `shop_delivery` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_payment` [ RunTime:0.0080s ]
+SQL: SELECT id pay_type_id,name pay_type_name FROM `shop_payment` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_cart` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `shop_cart` [ RunTime:0.0080s ]
+SQL: SELECT a.*,b.name,b.image,b.sn,b.shop_price,b.stock FROM shop_cart as a LEFT JOIN shop_goods as b on b.id=a.goods_id  WHERE a.user_id = '4'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_order` [ RunTime:0.0080s ]
+SQL: INSERT INTO `shop_order` (`user_id`,`create_time`,`name`,`phone`,`detail_address`,`province_name`,`city_name`,`area_name`,`delivery_id`,`delivery_name`,`delivery_price`,`pay_type_id`,`pay_type_name`,`price`) VALUES ('4','1473144470','大涛哥','13800138000','春熙路1号','黑龙江省','齐齐哈尔市','梅里斯达斡尔族区','1','普通快递','15.00','1','支付宝','2000.5') [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_order_item` [ RunTime:0.0130s ]
+SQL: INSERT INTO `shop_order_item` (`order_id`,`goods_id`,`goods_name`,`goods_image`,`goods_price`,`amount`,`total_price`) VALUES ('4','2','手机','http://ocavymzvy.bkt.clouddn.com//2016-08-26_57bf9d4c1668d.jpg','2000.00','1','2000'),('4','1','黄导','http://ocavymzvy.bkt.clouddn.com//2016-08-25_57be5c82ceecc.jpg','0.50','1','0.5') [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0110s ]
+SQL: UPDATE `shop_goods` SET `stock`=stock-1 [ RunTime:0.0000s ]
+
+[ 2016-09-06T14:48:39+08:00 ] 127.0.0.1 /Order/submit.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_user_address` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `shop_user_address` [ RunTime:0.0100s ]
+SQL: SELECT a.name,a.phone,a.address detail_address,b.name province_name,c.name city_name,d.name area_name FROM shop_user_address as a INNER JOIN shop_locations as b on b.id=a.p_id INNER JOIN shop_locations as c on c.id=a.c_id INNER JOIN shop_locations as d on d.id=a.a_id  WHERE a.user_id = '4' AND a.id = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `shop_delivery` [ RunTime:0.0110s ]
+SQL: SELECT id delivery_id,name delivery_name,price delivery_price FROM `shop_delivery` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_payment` [ RunTime:0.0090s ]
+SQL: SELECT id pay_type_id,name pay_type_name FROM `shop_payment` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_cart` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `shop_cart` [ RunTime:0.0070s ]
+SQL: SELECT a.*,b.name,b.image,b.sn,b.shop_price,b.stock FROM shop_cart as a LEFT JOIN shop_goods as b on b.id=a.goods_id  WHERE a.user_id = '4'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_order` [ RunTime:0.0100s ]
+SQL: INSERT INTO `shop_order` (`user_id`,`create_time`,`name`,`phone`,`detail_address`,`province_name`,`city_name`,`area_name`,`delivery_id`,`delivery_name`,`delivery_price`,`pay_type_id`,`pay_type_name`,`price`) VALUES ('4','1473144519','大涛哥','13800138000','春熙路1号','黑龙江省','齐齐哈尔市','梅里斯达斡尔族区','1','普通快递','15.00','1','支付宝','2000.5') [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `shop_order_item` [ RunTime:0.0120s ]
+SQL: INSERT INTO `shop_order_item` (`order_id`,`goods_id`,`goods_name`,`goods_image`,`goods_price`,`amount`,`total_price`) VALUES ('5','2','手机','http://ocavymzvy.bkt.clouddn.com//2016-08-26_57bf9d4c1668d.jpg','2000.00','1','2000'),('5','1','黄导','http://ocavymzvy.bkt.clouddn.com//2016-08-25_57be5c82ceecc.jpg','0.50','1','0.5') [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0090s ]
+SQL: UPDATE `shop_goods` SET `stock`=stock-1 [ RunTime:0.0010s ]
+
+[ 2016-09-06T14:49:56+08:00 ] 127.0.0.1 /Goods/getContent/goods_id/1.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_content` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `shop_goods_content` WHERE `goods_id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2016-09-06T14:49:56+08:00 ] 127.0.0.1 /Goods/getClicks/goods_id/1.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2016-09-06T14:50:01+08:00 ] 127.0.0.1 /Goods/getContent/goods_id/1.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_goods_content` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `shop_goods_content` WHERE `goods_id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2016-09-06T14:50:01+08:00 ] 127.0.0.1 /Goods/getClicks/goods_id/1.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2016-09-06T14:50:10+08:00 ] 127.0.0.1 /Goods/getClicks/goods_id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2016-09-06T14:50:10+08:00 ] 127.0.0.1 /Goods/getContent/goods_id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_goods_content` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `shop_goods_content` WHERE `goods_id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2016-09-06T14:50:18+08:00 ] 127.0.0.1 /Goods/getContent/goods_id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_content` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `shop_goods_content` WHERE `goods_id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2016-09-06T14:50:18+08:00 ] 127.0.0.1 /Goods/getClicks/goods_id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2016-09-06T14:50:21+08:00 ] 127.0.0.1 /Cart/getCateByIndex.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_cart` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `shop_cart` [ RunTime:0.0070s ]
+SQL: SELECT a.*,b.name,b.image,b.sn,b.shop_price,b.stock FROM shop_cart as a LEFT JOIN shop_goods as b on b.id=a.goods_id  WHERE a.user_id = '4'  [ RunTime:0.0010s ]
+
+[ 2016-09-06T14:50:36+08:00 ] 127.0.0.1 /Order/submit.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_user_address` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `shop_user_address` [ RunTime:0.0050s ]
+SQL: SELECT a.name,a.phone,a.address detail_address,b.name province_name,c.name city_name,d.name area_name FROM shop_user_address as a INNER JOIN shop_locations as b on b.id=a.p_id INNER JOIN shop_locations as c on c.id=a.c_id INNER JOIN shop_locations as d on d.id=a.a_id  WHERE a.user_id = '4' AND a.id = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_delivery` [ RunTime:0.0060s ]
+SQL: SELECT id delivery_id,name delivery_name,price delivery_price FROM `shop_delivery` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_payment` [ RunTime:0.0070s ]
+SQL: SELECT id pay_type_id,name pay_type_name FROM `shop_payment` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_cart` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `shop_cart` [ RunTime:0.0060s ]
+SQL: SELECT a.*,b.name,b.image,b.sn,b.shop_price,b.stock FROM shop_cart as a LEFT JOIN shop_goods as b on b.id=a.goods_id  WHERE a.user_id = '4'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_order` [ RunTime:0.0060s ]
+SQL: INSERT INTO `shop_order` (`user_id`,`create_time`,`name`,`phone`,`detail_address`,`province_name`,`city_name`,`area_name`,`delivery_id`,`delivery_name`,`delivery_price`,`pay_type_id`,`pay_type_name`,`price`) VALUES ('4','1473144636','大涛哥','13800138000','春熙路1号','黑龙江省','齐齐哈尔市','梅里斯达斡尔族区','2','顺丰','22.00','1','支付宝','10001') [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_order_item` [ RunTime:0.0080s ]
+SQL: INSERT INTO `shop_order_item` (`order_id`,`goods_id`,`goods_name`,`goods_image`,`goods_price`,`amount`,`total_price`) VALUES ('6','1','黄导','http://ocavymzvy.bkt.clouddn.com//2016-08-25_57be5c82ceecc.jpg','0.50','2','1'),('6','2','手机','http://ocavymzvy.bkt.clouddn.com//2016-08-26_57bf9d4c1668d.jpg','2000.00','5','10000') [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0070s ]
+SQL: UPDATE `shop_goods` SET `stock`=stock-2 WHERE `id` = 1 [ RunTime:0.0000s ]
+SQL: UPDATE `shop_goods` SET `stock`=stock-5 WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_cart` [ RunTime:0.0060s ]
+SQL: DELETE FROM `shop_cart` WHERE `user_id` = 4 [ RunTime:0.0010s ]
+
+[ 2016-09-06T14:50:37+08:00 ] 127.0.0.1 /Order/ok/orderid/6.html
+ERR: 非法操作:ok
+
+[ 2016-09-06T14:51:52+08:00 ] 127.0.0.1 /Goods/getClicks/goods_id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2016-09-06T14:51:53+08:00 ] 127.0.0.1 /Goods/getContent/goods_id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_content` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `shop_goods_content` WHERE `goods_id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2016-09-06T14:51:58+08:00 ] 127.0.0.1 /Goods/getClicks/goods_id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0250s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0020s ]
+
+[ 2016-09-06T14:51:58+08:00 ] 127.0.0.1 /Goods/getContent/goods_id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0240s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `shop_goods_content` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `shop_goods_content` WHERE `goods_id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2016-09-06T14:51:58+08:00 ] 127.0.0.1 /Cart/getCateByIndex.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_cart` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `shop_cart` [ RunTime:0.0100s ]
+SQL: SELECT a.*,b.name,b.image,b.sn,b.shop_price,b.stock FROM shop_cart as a LEFT JOIN shop_goods as b on b.id=a.goods_id  WHERE a.user_id = '4'  [ RunTime:0.0000s ]
+
+[ 2016-09-06T14:53:59+08:00 ] 127.0.0.1 /User/getLocationInfo/id/1.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_user_address` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `shop_user_address` WHERE `id` = 1 AND `user_id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_locations` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `shop_locations` WHERE `parent_id` = 8  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `shop_locations` WHERE `parent_id` = 131  [ RunTime:0.0040s ]
+
+[ 2016-09-06T14:54:56+08:00 ] 127.0.0.1 /User/getLocationInfo/id/1.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `shop_user` WHERE `session_token` = '4ff6bb7020b421f3b71bbc1d4f4985d0' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_user_address` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `shop_user_address` WHERE `id` = 1 AND `user_id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_locations` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `shop_locations` WHERE `parent_id` = 8  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `shop_locations` WHERE `parent_id` = 131  [ RunTime:0.0030s ]
+

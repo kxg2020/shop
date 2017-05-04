@@ -1,0 +1,132 @@
+<extend name="Public:base" />
+<block name="css">
+    <css href="__PUBLIC__/uploadify/uploadify.css" />
+    <style>
+        #file_upload_1{height: 100px!important;}
+        .shangchuanBtn{width: 100px!important; height: 100px!important; line-height: 100px!important; background: white; border: 1px dashed #aaa; border-radius: 0; font-size: 30px; font-weight: bold; color: #666;}
+        .shangchuanBtn:hover{background: #f5f5f5!important;}
+    </style>
+</block>
+<!-- page heading start-->
+<block name="content">
+<div class="page-heading">
+    <h3>
+        管理首页
+    </h3>
+    <ul class="breadcrumb">
+        <li>
+            <a href="#">管理后台</a>
+        </li>
+        <li> 品牌管理 </li>
+        <li class="active"> 新增品牌 </li>
+    </ul>
+</div>
+<!-- page heading end-->
+
+<!--body wrapper start-->
+<section class="wrapper">
+    <!-- page start-->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <section class="panel">
+                <header class="panel-heading">
+                    新增品牌
+                </header>
+                <div class="panel-body">
+                    <form role="form" action="{:U()}" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">品牌名称</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" name="name" placeholder="请输入名字">
+                        </div>
+                        <div class="form-group">
+                            <label>简介</label>
+                            <textarea class="form-control" name="intro"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>品牌LOGO</label>
+                            <button id="file_upload_1"></button>
+                            <!--<input type="file" class="form-control" name="logo" placeholder="">-->          <div class="imgBox">
+
+                            </div>
+                            <input type="hidden" name="logo" />
+                        </div>
+
+                        <div class="form-group">
+                            <label>状态</label>
+                            <input type="radio" name="status" value="1" checked />正常
+                            <input type="radio" name="status" value="0" />关闭
+                        </div>
+                        <button type="submit" class="btn btn-primary">提交新增</button>
+                    </form>
+
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+</block>
+
+<block name="js">
+    <!--引入uploadify-->
+    <js href="__PUBLIC__/uploadify/jquery.uploadify.min.js" />
+    <js href="__PUBLIC__/layer/layer.js" />
+    <script>
+        $(function() {
+            $("#file_upload_1").uploadify({
+                width: 100,
+                height: 100,
+                // 加载FLASH文件
+                swf           : '/Public/uploadify/uploadify.swf',
+                // 指定处理文件上传的后台地址
+                uploader      : '{:U("Brand/upload")}',
+                // 按钮样式
+                buttonClass: 'shangchuanBtn',
+                // 按钮文本内容
+                buttonText: '+',
+                // 最大允许上传的文件大小，单位： KB
+                fileSizeLimit: 2048,
+                // 允许上传的文件后缀
+                fileTypeExts: '*.jpg;*.png;*.gif',
+                // 在上传的同时传递给后台的参数（POST）
+                formData: {'abc': "TEXT"}, // REQUEST                // 关闭多文件上传 默认为true
+                multi: false,
+//                onQueueComplete: function(queueData){
+//                    // 队列上传完成触发的事件
+//                    console.log(queueData);
+//                }
+//                onSelectError: function(file, errorCode, errorMsg){
+//                    console.log(file)
+//                    console.log(errorCode)
+//                    console.log(errorMsg)
+//                    errorMsg = '出错了';
+//                    alert('出错了！');
+//                    return false;
+//                },
+//                onUploadComplete: function(file){
+//                    console.log(file.name);
+//                }
+                // 上传成功！
+                onUploadSuccess: function(file, data, response) {
+                    // file 指的是本地的文件信息
+                    // data 服务器返回的数据
+                    // response 响应信息
+                    data = $.parseJSON(data); // 将JSON字符串转换成JSON格式 JS里的对象
+                    if(data.status == 0){
+                        // 上传失败！
+                        layer.msg(data.msg, {
+                            time: 10000
+                        });
+                    }else{
+                        // 上传成功
+                        var _img = data.img;
+                        var _html = "<img src='"+ _img +"' width='100' height='100' />";
+                        $('.imgBox').html(_html);
+                        $('input[name="logo"]').val(_img);
+                    }
+                    console.log(data);
+                }
+            });
+        });
+    </script>
+</block>

@@ -1,0 +1,132 @@
+<extend name="Public:base" />
+<block name="css">
+    <link rel="stylesheet" href="__ZTREE__/css/zTreeStyle/zTreeStyle.css" type="text/css">
+</block>
+<block name="js">
+    <script type="text/javascript" src="__ZTREE__/js/jquery.ztree.core.js"></script>
+    <SCRIPT type="text/javascript">
+        <!--
+        var setting = {
+            data: {
+                key: {
+                    title:"t"
+                },
+                simpleData: {
+                    enable: true
+                }
+            },
+            callback: {
+//                beforeClick: beforeClick,
+                onClick: onClick
+            }
+        };
+        var _str = '{$lists}';
+
+        var zNodes = $.parseJSON(_str);
+
+        var log, className = "dark";
+//        function beforeClick(treeId, treeNode, clickFlag) {
+//            className = (className === "dark" ? "":"dark");
+//            showLog("[ "+getTime()+" beforeClick ]&nbsp;&nbsp;" + treeNode.name );
+//            return (treeNode.click != false);
+//        }
+        function onClick(event, treeId, treeNode, clickFlag) {
+            var _obj = $('input[name="parent_name"]');
+            _obj.val(treeNode.name);
+            if(treeNode.id <= 0){
+                $('input[name="parent_id"]').val(0);
+            }else {
+                $('input[name="parent_id"]').val(treeNode.id);
+            }
+        }
+//        function showLog(str) {
+//            if (!log) log = $("#log");
+//            log.append("<li class='"+className+"'>"+str+"</li>");
+//            if(log.children("li").length > 8) {
+//                log.get(0).removeChild(log.children("li")[0]);
+//            }
+//        }
+//        function getTime() {
+//            var now= new Date(),
+//                    h=now.getHours(),
+//                    m=now.getMinutes(),
+//                    s=now.getSeconds();
+//            return (h+":"+m+":"+s);
+//        }
+
+        $(document).ready(function(){
+            $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+            var treeObj = $.fn.zTree.getZTreeObj("treeDemo")
+            var node = treeObj.getNodeByParam("id", '{$info["parent_id"]}');
+            treeObj.selectNode(node)
+        });
+        //-->
+    </SCRIPT>
+</block>
+<!-- page heading start-->
+<block name="content">
+<div class="page-heading">
+    <h3>
+        管理首页
+    </h3>
+    <ul class="breadcrumb">
+        <li>
+            <a href="#">管理后台</a>
+        </li>
+        <li> 商品分类管理 </li>
+        <li class="active"> 编辑商品分类</li>
+    </ul>
+</div>
+<!-- page heading end-->
+
+<!--body wrapper start-->
+<section class="wrapper">
+    <!-- page start-->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <section class="panel">
+                <header class="panel-heading">
+                    编辑商品分类
+                </header>
+                <div class="panel-body">
+                    <form role="form" action="{:U('edit', ['id' => $info['id']])}" method="post">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">分类名称</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" name="name" value="{$info.name}" placeholder="请输入名字">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">所属上级</label>
+                            <input type="text" name="parent_name" value="{$info.parent_name}" />
+                            <input type="hidden" name="parent_id" value="{$info.parent_id}" />
+                            <div class="zTreeDemoBackground left">
+                                <ul id="treeDemo" class="ztree"></ul>
+                            </div>
+                            <!--<select class="form-control" name="parent_id">-->
+                                <!--<volist name="lists" id="c">-->
+                                    <!--<option value="{$c.id}" >-->
+                                        <!--<for start="1" end="$c['level']">-->
+                                            <!--&nbsp;&nbsp;-->
+                                        <!--</for>-->
+                                        <!--{$c.name}</option>-->
+                                <!--</volist>-->
+                            <!--</select>-->
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">分类简介</label>
+                            <textarea name="intro" class="form-control"></textarea>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="status" value="1" checked /> 开启
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">提交新增</button>
+                    </form>
+
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+</block>

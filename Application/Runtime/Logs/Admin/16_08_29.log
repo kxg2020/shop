@@ -1,0 +1,30 @@
+[ 2016-08-29T13:24:59+08:00 ] 127.0.0.1 /Admin/getadminrole.html?id=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Admin\Behavior\RbacBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_admin_role` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `shop_admin_role` WHERE `admin_id` = 3  [ RunTime:0.0010s ]
+
+[ 2016-08-29T13:24:59+08:00 ] 127.0.0.1 /Admin/role/id/3.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Admin\Behavior\RbacBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:role
+
+[ 2016-08-29T13:25:03+08:00 ] 127.0.0.1 /Admin/setrole.html?id=3&roles=
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Admin\Behavior\RbacBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin_role` [ RunTime:0.0040s ]
+SQL: DELETE FROM `shop_admin_role` WHERE `admin_id` = 3 [ RunTime:0.0010s ]
+SQL: INSERT INTO `shop_admin_role` (`admin_id`,`role_id`) VALUES ('3','0') [ RunTime:0.0000s ]
+

@@ -1,0 +1,25 @@
+* * * * * shell.....
+分钟 小时 日 月 星期
+2 * * * *.... // 每当分钟数位2的时候，
+2,5 * * * *.... // 每当分钟数为2或5的时候
+* 1 * * * ....  // 每天1点
+* * 3 * * ....  // 每月3号
+* 2 3 * 4 ....  // 满足星期四 还要是3号的2点
+*/2 * * * * ..... // 当分钟数能被2整除的时候
+* */2 * * * ..... //......
+
+// 需求，每10分钟执行一次 php index.php Goods/redisSynDb
+*/10 * * * * cd 网站根目录 && /alidata/server/php/bin/php index.php Goods/redisSynDb
+* 3 * * * cd 网站根目录 && /alidata/server/php/bin/php index.php Goods/redisSynDb
+/var/log/cron
+cron
+crond
+service crond restart
+service mysqld start
+nginx -s reload  # 重启NGINX
+nginx -c ......
+nginx
+
+
+php-fpm -y php-fpm.conf -c php.ini
+

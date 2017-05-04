@@ -1,0 +1,51 @@
+[ 2016-08-22T09:24:05+08:00 ] 127.0.0.1 /Article/index.html?category=1&name=
+ERR: 1054:Unknown column 'a.category_id' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `shop_article` WHERE a.category_id = 1 LIMIT 1  
+
+[ 2016-08-22T09:39:41+08:00 ] 127.0.0.1 /uploadify/uploadify.swf?preventswfcaching=1471829980977
+ERR: 无法加载控制器:Uploadify
+
+[ 2016-08-22T09:39:41+08:00 ] 127.0.0.1 /uploadify/uploadify.swf?preventswfcaching=1471829980977
+ERR: 无法加载控制器:Uploadify
+
+[ 2016-08-22T09:39:42+08:00 ] 127.0.0.1 /uploadify/uploadify.swf?preventswfcaching=1471829982810
+ERR: 无法加载控制器:Uploadify
+
+[ 2016-08-22T09:39:42+08:00 ] 127.0.0.1 /uploadify/uploadify.swf?preventswfcaching=1471829982810
+ERR: 无法加载控制器:Uploadify
+
+[ 2016-08-22T09:40:14+08:00 ] 127.0.0.1 /uploadify/uploadify.swf?preventswfcaching=1471830014008
+ERR: 无法加载控制器:Uploadify
+
+[ 2016-08-22T09:40:14+08:00 ] 127.0.0.1 /uploadify/uploadify.swf?preventswfcaching=1471830014008
+ERR: 无法加载控制器:Uploadify
+
+[ 2016-08-22T09:42:50+08:00 ] 127.0.0.1 /uploadify/uploadify.php
+ERR: 无法加载控制器:Uploadify
+
+[ 2016-08-22T10:18:54+08:00 ] 127.0.0.1 /Brand/upload.html
+ERR: 非法操作:1
+
+[ 2016-08-22T10:20:01+08:00 ] 127.0.0.1 /Brand/upload.html
+ERR: 非法操作:TEXT
+
+[ 2016-08-22T10:25:34+08:00 ] 127.0.0.1 /Brand/uploadify.swf?preventswfcaching=1471832734469
+ERR: 非法操作:uploadify.swf
+
+[ 2016-08-22T10:25:34+08:00 ] 127.0.0.1 /Brand/uploadify.swf?preventswfcaching=1471832734469
+ERR: 非法操作:uploadify.swf
+
+[ 2016-08-22T15:29:26+08:00 ] 127.0.0.1 /Brand/undefined
+ERR: 非法操作:undefined
+
+[ 2016-08-22T19:02:52+08:00 ] 127.0.0.1 /GoodsCategory/add.html
+ERR: :
+ [ SQL语句 ] : SELECT ?F, ?F, ?F, ?F FROM ?T WHERE ?F = ?N
+
+[ 2016-08-22T19:05:45+08:00 ] 127.0.0.1 /GoodsCategory/add.html
+ERR: Think\Model:excute方法不存在！
+
+[ 2016-08-22T19:06:04+08:00 ] 127.0.0.1 /GoodsCategory/add.html
+ERR: :
+ [ SQL语句 ] : INSERT INTO shop_goods_category SET ?%Array
+

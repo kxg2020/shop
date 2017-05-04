@@ -1,0 +1,32 @@
+[ 2016-08-26T09:41:03+08:00 ] 127.0.0.1 /Goods/index.html?name=&category_id=3&brand_id=0&min=&max=
+ERR: 1054:Unknown column 'b.lft' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM shop_goods as a WHERE b.lft >= '27' AND b.rght <= '28' LIMIT 1  
+
+[ 2016-08-26T09:43:01+08:00 ] 127.0.0.1 /Goods/index.html?name=&category_id=9&brand_id=0&min=&max=
+ERR: 1054:Unknown column 'a.category_id' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM shop_goods as a LEFT JOIN shop_goods_category as b ON b.id=a.goods_category_id  WHERE a.category_id = 9 LIMIT 1  
+
+[ 2016-08-26T11:05:32+08:00 ] 127.0.0.1 /Goods/pics/id/
+ERR: 参数错误或者未定义:id
+
+[ 2016-08-26T11:05:42+08:00 ] 127.0.0.1 /Goods/pics/id/
+ERR: 参数错误或者未定义:id
+
+[ 2016-08-26T15:28:38+08:00 ] 127.0.0.1 /Brand/form_advanced_components.html
+ERR: 非法操作:form_advanced_components
+
+[ 2016-08-26T15:28:48+08:00 ] 127.0.0.1 /Goods/general.html
+ERR: 非法操作:general
+
+[ 2016-08-26T16:24:15+08:00 ] 127.0.0.1 /Goods/pics/id/
+ERR: 参数错误或者未定义:id
+
+[ 2016-08-26T18:56:01+08:00 ] 127.0.0.1 /n
+ERR: 无法加载控制器:N
+
+[ 2016-08-26T19:33:37+08:00 ] 127.0.0.1 /xxxx.php
+ERR: 无法加载控制器:Xxxx.php
+
+[ 2016-08-26T19:42:09+08:00 ] 127.0.0.1 /download.php?111.png
+ERR: 无法加载控制器:Download.php
+

@@ -1,0 +1,149 @@
+<extend name="Public:base" />
+<block name="content">
+
+    <!-- page heading start-->
+    <div class="page-heading">
+        <h3>
+            管理首页
+        </h3>
+        <ul class="breadcrumb">
+            <li>
+                <a href="#">管理后台</a>
+            </li>
+            <li class="active"> 管理员列表 </li>
+        </ul>
+    </div>
+    <!-- page heading end-->
+
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-sm-12">
+                <section class="panel">
+                    <header class="panel-heading">
+                        管理员列表
+                            <span class="tools pull-right">
+                                <a href="{:U('add')}" class="btn btn-success btn-link">新增</a>
+                            </span>
+                    </header>
+                    <div class="panel-body">
+                        <form class="form-inline" action="{:U()}">
+                            <div class="form-group">
+                                <label for="exampleInputName2">管理员</label>
+                                <input type="text" class="form-control" id="exampleInputName2" name="name" value="{:I('get.name')}">
+                            </div>
+                            <button type="submit" class="btn btn-default">搜索</button>
+                        </form>
+                        <hr/>
+                        <div class="adv-table">
+                            <table  class="display table table-bordered table-striped" id="dynamic-table">
+                                <thead>
+                                <tr>
+                                    <th>编号ID</th>
+                                    <th>账号</th>
+                                    <th>密码</th>
+                                    <th>真实姓名</th>
+                                    <th>电话</th>
+                                    <th>创建时间</th>
+                                    <th>最后登录IP</th>
+                                    <th>最后登录时间</th>
+                                    <th class="hidden-phone">操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <volist name="lists" id="list">
+                                    <tr class="gradeX">
+                                        <td>{$list.id}</td>
+                                        <td>{$list.username}</td>
+                                        <td></td>
+                                        <td>{$list.truename}</td>
+                                        <td>{$list.phone}</td>
+                                        <td>{:date('Y-m-d H:i:s', $list['create_time'])}</td>
+                                        <td>{$list.last_login_ip}</td>
+                                        <td>{:date('Y-m-d H:i:s', $list['last_login_time'])}</td>
+                                        <td>
+                                            <a href="{:U('edit', array('id' => $list['id']))}" class="btn btn-xs btn-success">编辑</a>
+                                            <a href="{:U('role', array('id' => $list['id']))}" data-toggle="modal" data-id="{$list['id']}" data-target="#myRole" class="btn btn-xs btn-info" onclick="getAdminRole($(this))">所属角色</a>
+                                            <a data-href="{:U('delete', array('id' => $list['id']))}" data-toggle="modal" data-target="#myModal" class="btn btn-danger btn-xs deleteBtn">删除</a>
+                                        </td>
+                                    </tr>
+                                </volist>
+                                </tbody>
+                            </table>
+                            {$pages}
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">提示：Notice!</h4>
+                </div>
+                <div class="modal-body">
+                    亲！你确认要删除吗？删除了没有办法恢复哟~么么哒！
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">好的，我不删除了</button>
+                    <a href="" id="deleteTrue" class="btn btn-primary">滚！狠心删除</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myRole" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">修改管理员所属角色</h4>
+                </div>
+                <div class="modal-body" id="box">
+                    角色列表：
+                    <volist name="roles" id="r">
+                        <input type="checkbox" class="roleName" value="{$r.id}" /> {$r.role_name}&nbsp;
+                    </volist>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default closeBtn" data-dismiss="modal">不改了</button>
+                    <a href="javascript:;" onclick="setRole()" class="btn btn-primary">执行修改</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $('.deleteBtn').click(function(){
+                var _link = $(this).attr('data-href');
+                $('#deleteTrue').attr('href', _link);
+            })
+        });
+
+        function getAdminRole(obj){
+            $('.roleName').prop('checked', false);
+            var _id = obj.attr('data-id');
+            $('#box').attr('data-id', _id);
+            $.getJSON('{:U("Admin/getadminrole")}', "id="+_id, function(res){
+                for(var i in res){
+                    $('.roleName[value="'+res[i]+'"]').prop('checked', true);
+                }
+            });
+        }
+
+        function setRole(){
+            var _roles = new Array;
+            var _id = $('#box').attr('data-id');
+            $('.roleName:checked').val(function(index, value){
+                _roles.push(value);
+                return value;
+            });
+            _roles = _roles.join(',');
+            $.getJSON('{:U("Admin/setrole")}', 'id='+_id+'&roles='+_roles, function(res){
+                $('.closeBtn').click();
+            })
+        }
+    </script>
+</block>

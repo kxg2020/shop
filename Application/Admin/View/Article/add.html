@@ -1,0 +1,75 @@
+<extend name="Public:base" />
+<!-- page heading start-->
+<block name="content">
+<div class="page-heading">
+    <h3>
+        管理首页
+    </h3>
+    <ul class="breadcrumb">
+        <li>
+            <a href="#">管理后台</a>
+        </li>
+        <li> 文章管理 </li>
+        <li class="active"> 新增文章</li>
+    </ul>
+</div>
+<!-- page heading end-->
+
+<!--body wrapper start-->
+<section class="wrapper">
+    <!-- page start-->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <section class="panel">
+                <header class="panel-heading">
+                    新增文章
+                </header>
+                <div class="panel-body">
+                    <form role="form" action="{:U()}" method="post">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">文章名称</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" name="title" placeholder="请输入名字">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">文章所属分类</label>
+                            <select class="form-control" name="category_id">
+                                <volist name="categories" id="c">
+                                    <option value="{$c.id}" >{$c.name}</option>
+                                </volist>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">文章简介</label>
+                            <textarea name="intro" class="form-control"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>文章点击量</label>
+                            <input type="text" class="form-control" id="" name="hits" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">文章详细内容</label>
+                            <textarea id="container" name="content"></textarea>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="status" value="1" checked /> 开启
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">提交新增</button>
+                    </form>
+
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+</block>
+
+<block name="js">
+    <js href="__PUBLIC__/ueditor/ueditor.config.js" />
+    <js href="__PUBLIC__/ueditor/ueditor.all.js" />
+    <script type="text/javascript">
+        var ue = UE.getEditor('container');
+    </script>
+</block>

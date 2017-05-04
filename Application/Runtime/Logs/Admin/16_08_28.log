@@ -1,0 +1,407 @@
+[ 2016-08-28T09:20:29+08:00 ] 127.0.0.1 /form_advanced_components.html
+ERR: 无法加载控制器:Form_advanced_components
+
+[ 2016-08-28T09:21:15+08:00 ] 127.0.0.1 /form_advanced_components.html
+ERR: 无法加载控制器:Form_advanced_components
+
+[ 2016-08-28T09:21:23+08:00 ] 127.0.0.1 /Role/index.html
+ERR: 模板不存在:F:\phpStudy\WWW\shop\admin/../Application/Admin/View/Role/index.html
+
+[ 2016-08-28T09:31:29+08:00 ] 127.0.0.1 /Role/edit/id/1.html
+ERR: 非法操作:edit
+
+[ 2016-08-28T10:05:15+08:00 ] 127.0.0.1 /Role/form_wizard.html
+ERR: 非法操作:form_wizard
+
+[ 2016-08-28T10:06:44+08:00 ] 127.0.0.1 /Permission/add.html
+ERR: 模板不存在:F:\phpStudy\WWW\shop\admin/../Application/Admin/View/Permission/add.html
+
+[ 2016-08-28T10:20:51+08:00 ] 127.0.0.1 /Permission/edit/id/5.html
+ERR: 模板不存在:F:\phpStudy\WWW\shop\admin/../Application/Admin/View/Permission/edit.html
+
+[ 2016-08-28T14:21:20+08:00 ] 127.0.0.1 /Admin/role/id/2.html
+ERR: 非法操作:role
+
+[ 2016-08-28T14:24:26+08:00 ] 127.0.0.1 /Admin/role/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:role
+
+[ 2016-08-28T14:26:42+08:00 ] 127.0.0.1 /Admin/role/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+ERR: 非法操作:role
+
+[ 2016-08-28T14:31:33+08:00 ] 127.0.0.1 /Admin/getadminrole.html?id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `shop_admin_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `shop_admin_role` WHERE `admin_id` = 2  [ RunTime:0.0010s ]
+
+[ 2016-08-28T14:31:34+08:00 ] 127.0.0.1 /Admin/role/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 非法操作:role
+
+[ 2016-08-28T14:31:46+08:00 ] 127.0.0.1 /Admin/getadminrole.html?id=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `shop_admin_role` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `shop_admin_role` WHERE `admin_id` = 3  [ RunTime:0.0010s ]
+
+[ 2016-08-28T14:33:14+08:00 ] 127.0.0.1 /Admin/getadminrole.html?id=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `shop_admin_role` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `shop_admin_role` WHERE `admin_id` = 3  [ RunTime:0.0010s ]
+
+[ 2016-08-28T14:33:14+08:00 ] 127.0.0.1 /Admin/role/id/3.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+ERR: 非法操作:role
+
+[ 2016-08-28T14:34:01+08:00 ] 127.0.0.1 /Admin/getadminrole.html?id=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_admin_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `shop_admin_role` WHERE `admin_id` = 3  [ RunTime:0.0000s ]
+
+[ 2016-08-28T14:34:01+08:00 ] 127.0.0.1 /Admin/role/id/3.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 非法操作:role
+
+[ 2016-08-28T14:34:24+08:00 ] 127.0.0.1 /Admin/getadminrole.html?id=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `shop_admin_role` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `shop_admin_role` WHERE `admin_id` = 3  [ RunTime:0.0000s ]
+
+[ 2016-08-28T14:34:24+08:00 ] 127.0.0.1 /Admin/role/id/3.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 非法操作:role
+
+[ 2016-08-28T14:34:50+08:00 ] 127.0.0.1 /Admin/getadminrole.html?id=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `shop_admin_role` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `shop_admin_role` WHERE `admin_id` = 3  [ RunTime:0.0000s ]
+
+[ 2016-08-28T14:34:50+08:00 ] 127.0.0.1 /Admin/role/id/3.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:role
+
+[ 2016-08-28T14:36:16+08:00 ] 127.0.0.1 /Admin/getadminrole.html?id=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `shop_admin_role` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `shop_admin_role` WHERE `admin_id` = 3  [ RunTime:0.0010s ]
+
+[ 2016-08-28T14:36:16+08:00 ] 127.0.0.1 /Admin/role/id/3.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:role
+
+[ 2016-08-28T14:37:12+08:00 ] 127.0.0.1 /Admin/getadminrole.html?id=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `shop_admin_role` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `shop_admin_role` WHERE `admin_id` = 3  [ RunTime:0.0030s ]
+
+[ 2016-08-28T14:37:12+08:00 ] 127.0.0.1 /Admin/role/id/3.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+ERR: 非法操作:role
+
+[ 2016-08-28T14:37:29+08:00 ] 127.0.0.1 /Admin/getadminrole.html?id=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `shop_admin_role` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `shop_admin_role` WHERE `admin_id` = 3  [ RunTime:0.0000s ]
+
+[ 2016-08-28T14:37:29+08:00 ] 127.0.0.1 /Admin/role/id/3.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:role
+
+[ 2016-08-28T14:40:15+08:00 ] 127.0.0.1 /Admin/getadminrole.html?id=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `shop_admin_role` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `shop_admin_role` WHERE `admin_id` = 3  [ RunTime:0.0010s ]
+
+[ 2016-08-28T14:40:15+08:00 ] 127.0.0.1 /Admin/role/id/3.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 非法操作:role
+
+[ 2016-08-28T14:40:46+08:00 ] 127.0.0.1 /Admin/getadminrole.html?id=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_admin_role` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `shop_admin_role` WHERE `admin_id` = 3  [ RunTime:0.0000s ]
+
+[ 2016-08-28T14:40:46+08:00 ] 127.0.0.1 /Admin/role/id/3.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:role
+
+[ 2016-08-28T14:41:47+08:00 ] 127.0.0.1 /Admin/getadminrole.html?id=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `shop_admin_role` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `shop_admin_role` WHERE `admin_id` = 3  [ RunTime:0.0000s ]
+
+[ 2016-08-28T14:41:47+08:00 ] 127.0.0.1 /Admin/role/id/3.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:role
+
+[ 2016-08-28T14:44:46+08:00 ] 127.0.0.1 /Admin/getadminrole.html?id=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `shop_admin_role` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `shop_admin_role` WHERE `admin_id` = 3  [ RunTime:0.0000s ]
+
+[ 2016-08-28T14:44:46+08:00 ] 127.0.0.1 /Admin/role/id/3.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 非法操作:role
+
+[ 2016-08-28T14:50:46+08:00 ] 127.0.0.1 /Admin/getadminrole.html?id=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_admin_role` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `shop_admin_role` WHERE `admin_id` = 3  [ RunTime:0.0010s ]
+
+[ 2016-08-28T14:50:46+08:00 ] 127.0.0.1 /Admin/role/id/3.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:role
+
+[ 2016-08-28T14:50:50+08:00 ] 127.0.0.1 /Admin/setrole.html?id=3&roles=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `shop_admin_role` [ RunTime:0.0090s ]
+SQL: DELETE FROM `shop_admin_role` WHERE `admin_id` = 3 [ RunTime:0.0000s ]
+SQL: INSERT INTO `shop_admin_role` (`admin_id`,`role_id`) VALUES ('3','3') [ RunTime:0.0000s ]
+
+[ 2016-08-28T14:50:59+08:00 ] 127.0.0.1 /Admin/getadminrole.html?id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `shop_admin_role` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `shop_admin_role` WHERE `admin_id` = 2  [ RunTime:0.0000s ]
+
+[ 2016-08-28T14:51:09+08:00 ] 127.0.0.1 /Admin/getadminrole.html?id=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `shop_admin_role` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `shop_admin_role` WHERE `admin_id` = 3  [ RunTime:0.0010s ]
+
+[ 2016-08-28T14:51:09+08:00 ] 127.0.0.1 /Admin/role/id/3.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 非法操作:role
+
+[ 2016-08-28T14:51:18+08:00 ] 127.0.0.1 /Admin/getadminrole.html?id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_admin_role` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `shop_admin_role` WHERE `admin_id` = 2  [ RunTime:0.0000s ]
+
+[ 2016-08-28T14:52:02+08:00 ] 127.0.0.1 /Admin/getadminrole.html?id=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `shop_admin_role` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `shop_admin_role` WHERE `admin_id` = 3  [ RunTime:0.0010s ]
+
+[ 2016-08-28T14:52:02+08:00 ] 127.0.0.1 /Admin/role/id/3.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 非法操作:role
+
+[ 2016-08-28T14:52:06+08:00 ] 127.0.0.1 /Admin/getadminrole.html?id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `shop_admin_role` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `shop_admin_role` WHERE `admin_id` = 2  [ RunTime:0.0010s ]
+
+[ 2016-08-28T14:52:24+08:00 ] 127.0.0.1 /Admin/getadminrole.html?id=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `shop_admin_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `shop_admin_role` WHERE `admin_id` = 3  [ RunTime:0.0000s ]
+
+[ 2016-08-28T14:52:24+08:00 ] 127.0.0.1 /Admin/role/id/3.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+ERR: 非法操作:role
+
+[ 2016-08-28T14:52:29+08:00 ] 127.0.0.1 /Admin/getadminrole.html?id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `shop_admin_role` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `shop_admin_role` WHERE `admin_id` = 2  [ RunTime:0.0000s ]
+
+[ 2016-08-28T14:52:34+08:00 ] 127.0.0.1 /Admin/getadminrole.html?id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_admin_role` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `shop_admin_role` WHERE `admin_id` = 2  [ RunTime:0.0010s ]
+
+[ 2016-08-28T14:52:37+08:00 ] 127.0.0.1 /Admin/setrole.html?id=2&roles=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_admin_role` [ RunTime:0.0050s ]
+SQL: DELETE FROM `shop_admin_role` WHERE `admin_id` = 2 [ RunTime:0.0010s ]
+SQL: INSERT INTO `shop_admin_role` (`admin_id`,`role_id`) VALUES ('2','2') [ RunTime:0.0000s ]
+
+[ 2016-08-28T14:52:40+08:00 ] 127.0.0.1 /Admin/getadminrole.html?id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `shop_admin_role` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `shop_admin_role` WHERE `admin_id` = 2  [ RunTime:0.0000s ]
+
+[ 2016-08-28T14:52:59+08:00 ] 127.0.0.1 /Admin/getadminrole.html?id=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `shop_admin_role` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `shop_admin_role` WHERE `admin_id` = 3  [ RunTime:0.0010s ]
+
+[ 2016-08-28T14:53:04+08:00 ] 127.0.0.1 /Admin/getadminrole.html?id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_admin_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `shop_admin_role` WHERE `admin_id` = 2  [ RunTime:0.0010s ]
+
+[ 2016-08-28T14:53:36+08:00 ] 127.0.0.1 /Admin/getadminrole.html?id=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `shop_admin_role` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `shop_admin_role` WHERE `admin_id` = 3  [ RunTime:0.0010s ]
+
+[ 2016-08-28T14:53:36+08:00 ] 127.0.0.1 /Admin/role/id/3.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:role
+
+[ 2016-08-28T14:53:40+08:00 ] 127.0.0.1 /Admin/setrole.html?id=3&roles=3,2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_admin_role` [ RunTime:0.0080s ]
+SQL: DELETE FROM `shop_admin_role` WHERE `admin_id` = 3 [ RunTime:0.0000s ]
+SQL: INSERT INTO `shop_admin_role` (`admin_id`,`role_id`) VALUES ('3','3'),('3','2') [ RunTime:0.0000s ]
+
+[ 2016-08-28T14:53:43+08:00 ] 127.0.0.1 /Admin/getadminrole.html?id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `shop_admin_role` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `shop_admin_role` WHERE `admin_id` = 2  [ RunTime:0.0000s ]
+
+[ 2016-08-28T14:53:47+08:00 ] 127.0.0.1 /Admin/getadminrole.html?id=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `shop_admin_role` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `shop_admin_role` WHERE `admin_id` = 3  [ RunTime:0.0000s ]
+
+[ 2016-08-28T14:53:50+08:00 ] 127.0.0.1 /Admin/getadminrole.html?id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_admin_role` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `shop_admin_role` WHERE `admin_id` = 2  [ RunTime:0.0000s ]
+
+[ 2016-08-28T14:53:53+08:00 ] 127.0.0.1 /Admin/getadminrole.html?id=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `shop_admin_role` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `shop_admin_role` WHERE `admin_id` = 3  [ RunTime:0.0010s ]
+
+[ 2016-08-28T14:53:56+08:00 ] 127.0.0.1 /Admin/setrole.html?id=3&roles=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `shop_admin_role` [ RunTime:0.0070s ]
+SQL: DELETE FROM `shop_admin_role` WHERE `admin_id` = 3 [ RunTime:0.0010s ]
+SQL: INSERT INTO `shop_admin_role` (`admin_id`,`role_id`) VALUES ('3','3') [ RunTime:0.0010s ]
+
+[ 2016-08-28T14:53:59+08:00 ] 127.0.0.1 /Admin/getadminrole.html?id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `shop_admin_role` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `shop_admin_role` WHERE `admin_id` = 2  [ RunTime:0.0000s ]
+
+[ 2016-08-28T14:54:03+08:00 ] 127.0.0.1 /Admin/getadminrole.html?id=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `shop_admin_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `shop_admin_role` WHERE `admin_id` = 3  [ RunTime:0.0000s ]
+
+[ 2016-08-28T15:15:09+08:00 ] 127.0.0.1 /Admin/getadminrole.html?id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `shop_admin_role` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `shop_admin_role` WHERE `admin_id` = 2  [ RunTime:0.0010s ]
+
+[ 2016-08-28T16:20:11+08:00 ] 127.0.0.1 /Login/index.html
+ERR: 无法加载控制器:Login
+
+[ 2016-08-28T16:23:06+08:00 ] 127.0.0.1 /Login/index.html
+ERR: 模板不存在:F:\phpStudy\WWW\shop\admin/../Application/Admin/View/Login/index.html
+

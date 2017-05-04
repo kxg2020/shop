@@ -1,0 +1,96 @@
+<extend name="Public:base" />
+<block name="content">
+
+    <!-- page heading start-->
+    <div class="page-heading">
+        <h3>
+            管理首页
+        </h3>
+        <ul class="breadcrumb">
+            <li>
+                <a href="#">管理后台</a>
+            </li>
+            <li class="active"> 品牌管理 </li>
+        </ul>
+    </div>
+    <!-- page heading end-->
+
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-sm-12">
+                <section class="panel">
+                    <header class="panel-heading">
+                        品牌列表
+                            <span class="tools pull-right">
+                                <a href="{:U('add')}" class="btn btn-success btn-link">新增</a>
+                            </span>
+                    </header>
+                    <div class="panel-body">
+                        <form class="form-inline" action="{:U()}">
+                            <div class="form-group">
+                                <label for="exampleInputName2">品牌名字</label>
+                                <input type="text" class="form-control" id="exampleInputName2" name="name" value="{:I('get.name')}">
+                            </div>
+                            <button type="submit" class="btn btn-default">搜索</button>
+                        </form>
+                        <hr/>
+                        <div class="adv-table">
+                            <table  class="display table table-bordered table-striped" id="dynamic-table">
+                                <thead>
+                                <tr>
+                                    <th>编号ID</th>
+                                    <th>品牌名称</th>
+                                    <th>简介</th>
+                                    <th>LOGO</th>
+                                    <th class="hidden-phone">操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <volist name="lists" id="list">
+                                    <tr class="gradeX">
+                                        <td>{$list.id}</td>
+                                        <td>{$list.name}</td>
+                                        <td>{$list.intro}</td>
+                                        <td><img src="{$list.logo}" width="50" /></td>
+                                        <td>
+                                            <a href="{:U('edit', array('id' => $list['id']))}" class="btn btn-xs btn-success">编辑</a>
+                                            <a data-href="{:U('delete', array('id' => $list['id']))}" data-toggle="modal" data-target="#myModal" class="btn btn-danger btn-xs deleteBtn">删除</a>
+                                        </td>
+                                    </tr>
+                                </volist>
+                                </tbody>
+                            </table>
+                            {$pages}
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">提示：Notice!</h4>
+                </div>
+                <div class="modal-body">
+                    亲！你确认要删除吗？删除了没有办法恢复哟~么么哒！
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">好的，我不删除了</button>
+                    <a href="" id="deleteTrue" class="btn btn-primary">滚！狠心删除</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $('.deleteBtn').click(function(){
+                var _link = $(this).attr('data-href');
+                $('#deleteTrue').attr('href', _link);
+            })
+        });
+    </script>
+</block>

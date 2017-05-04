@@ -1,0 +1,156 @@
+<extend name="Public:base" />
+<block name="content">
+
+    <!-- page heading start-->
+    <div class="page-heading">
+        <h3>
+            管理首页
+        </h3>
+        <ul class="breadcrumb">
+            <li>
+                <a href="#">管理后台</a>
+            </li>
+            <li class="active"> 商品管理 </li>
+        </ul>
+    </div>
+    <!-- page heading end-->
+
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-sm-12">
+                <section class="panel">
+                    <header class="panel-heading">
+                        商品管理
+                            <span class="tools pull-right">
+                                <a href="{:U('add')}" class="btn btn-success btn-link">新增</a>
+                            </span>
+                    </header>
+                    <div class="panel-body">
+                        <form class="form-inline" action="{:U()}">
+                            <div class="form-group">
+                                <label for="exampleInputName2">商品名字</label>
+                                <input type="text" class="form-control" id="exampleInputName2" name="name" value="{:I('get.name')}">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputName2">商品分类</label>
+                                <select name="category_id" class="form-control">
+                                    <option value="0">所有</option>
+                                    <volist name="categories" id="cate">
+                                        <option <if condition="$cate['id'] eq I('get.category_id')">selected</if> value="{$cate.id}">
+                                            <for start="1" end="$cate['level']">
+                                                &nbsp;&nbsp;
+                                            </for>
+                                            {$cate.name}</option>
+                                    </volist>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputName2">品牌</label>
+                                <select name="brand_id" class="form-control">
+                                    <option value="0">所有</option>
+                                    <volist name="brands" id="brand">
+                                        <option <if condition="$brand['id'] eq I('get.brand_id')">selected</if> value="{$brand.id}">{$brand.name}</option>
+                                    </volist>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputName2">价格区间</label>
+                                <input type="text" name="min" style="width: 50px;" class="form-control" value="{:I('get.min')}" /> -
+                                <input type="text" name="max"  style="width: 50px;" class="form-control" value="{:I('get.max')}" />
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputName2">商品状态</label>
+                                <input type="checkbox" name="goods_status[]" <if condition="in_array(1, I('get.goods_status'))">checked</if> value="1" >精品
+                                <input type="checkbox" name="goods_status[]" <if condition="in_array(2, I('get.goods_status'))">checked</if> value="2" >新品
+                                <input type="checkbox" name="goods_status[]" <if condition="in_array(4, I('get.goods_status'))">checked</if> value="4" >热销
+                            </div>
+                            <button type="submit" class="btn btn-default">搜索</button>
+                        </form>
+                        <hr/>
+                        <div class="adv-table">
+                            <table  class="display table table-bordered table-striped" id="dynamic-table">
+                                <thead>
+                                <tr>
+                                    <th>编号ID</th>
+                                    <th>商品名称</th>
+                                    <th>货号</th>
+                                    <th>图片</th>
+                                    <th>市场价格</th>
+                                    <th>本店价格</th>
+                                    <th>库存</th>
+                                    <th>状态</th>
+                                    <th>是否上架</th>
+                                    <th>品牌 & 供应商</th>
+                                    <th class="hidden-phone">操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <volist name="lists" id="list">
+                                    <tr class="gradeX">
+                                        <td>{$list.id}</td>
+                                        <td>{$list.name}</td>
+                                        <td>{$list.sn}</td>
+                                        <td><img src="{$list.image}" width="20" /></td>
+                                        <td>￥{$list.market_price}</td>
+                                        <td>￥{$list.shop_price}</td>
+                                        <td>{$list.stock}</td>
+                                        <!-- 000000111  -->
+                                        <td>
+                                            {~$statusArr=[]}
+                                            <if condition="$list['goods_status'] & 1">
+                                                {~$statusArr[]='精品'}
+                                            </if>
+                                            <if condition="$list['goods_status'] & 2">
+                                                {~$statusArr[]='新品'}
+                                            </if>
+                                            <if condition="$list['goods_status'] & 4">
+                                                {~$statusArr[]='热销'}
+                                            </if>
+                                            {:join('|', $statusArr)}
+                                        </td>
+                                        <td>{:$list['is_on_sale']==1?'上架':'下架'}</td>
+                                        <td>{$list.brand_name} & {$list.s_name}</td>
+                                        <td>
+                                            <a href="{:U('detail', array('id' => $list['id']))}" class="btn btn-xs btn-info">商品详情</a>
+                                            <a href="{:U('pics', array('id' => $list['id']))}" class="btn btn-xs btn-warning">商品相册</a>
+                                            <a href="{:U('edit', array('id' => $list['id']))}" class="btn btn-xs btn-success">编辑</a>
+                                            <a data-href="{:U('delete', array('id' => $list['id']))}" data-toggle="modal" data-target="#myModal" class="btn btn-danger btn-xs deleteBtn">删除</a>
+                                        </td>
+                                    </tr>
+                                </volist>
+                                </tbody>
+                            </table>
+                            {$pages}
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">提示：Notice!</h4>
+                </div>
+                <div class="modal-body">
+                    亲！你确认要删除吗？删除了没有办法恢复哟~么么哒！
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">好的，我不删除了</button>
+                    <a href="" id="deleteTrue" class="btn btn-primary">滚！狠心删除</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $('.deleteBtn').click(function(){
+                var _link = $(this).attr('data-href');
+                $('#deleteTrue').attr('href', _link);
+            })
+        });
+    </script>
+</block>

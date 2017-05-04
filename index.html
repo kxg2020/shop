@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>JS+CSS制作的搜索价格区间效果丨芯晴网页特效丨CsrCode.Cn</title>
+    <style>
+        #dragbar{position:relative; width:170px; top:26px; float:left;}
+        #long_bar{ height:0.6em; border:1px solid #aaa; border-radius:4px;}
+        #small_bar{ background:#ccc; position:absolute; z-index:1; top:1px; height:0.6em; line-height:0.6em; overflow:hidden;}
+        #long_bar .btn{ width:1.2em; z-index:2; position:absolute; height:1.2em; cursor:pointer; top:-0.3em; margin-left:-0.6em; background:#D72D2E; border-radius:4px; border:1px solid #D3D3D3;}
+        .price{ width:100px; padding:22px 5px 0; height:18px; color:#c90202; float:left; text-align:center;}
+    </style>
+</head>
+<body>
+<div id="min_price" class="price" style="margin-right:5px;">100元</div>
+<div id="dragbar">
+    <div id="long_bar">
+        <div id="small_bar"></div>
+        <span class="btn"></span>
+        <span class="btn"></span>
+    </div>
+</div>
+<div id="max_price" class="price" style="margin-left:5px;">1319元</div>
+</body>
+<script>
+    window.onload=function(){
+        var longbar=document.getElementById("long_bar");
+        var smallbar=document.getElementById("small_bar");
+        var arrbtn=longbar.getElementsByTagName("span");
+        var minP=document.getElementById("min_price");
+        var maxP=document.getElementById("max_price");
+        var minprice=parseInt(minP.innerHTML);
+        var maxprice=parseInt(maxP.innerHTML);
+        var total=maxprice-minprice,Isclick=false,zindex=2;
+        smallbar.style.width=100+"%";
+        smallbar.style.left=0;
+        arrbtn[0].style.left=0;
+        arrbtn[1].style.left=100+"%";
+        var maxwidth=longbar.offsetWidth;//最大移动值
+        arrbtn[0].onmousedown=function(e){
+            Isclick=true;
+            this.style.zIndex=++zindex;
+            var x=(e||window.event).clientX;//取点击位置的X轴长度值
+            //按钮的x轴长度值
+            var lenght=this.offsetLeft+(this.offsetWidth/2-1);
+            var btn2lenght=arrbtn[1].offsetLeft+(arrbtn[1].offsetWidth/2-1);
+            var maxlenght=Math.min(maxwidth,btn2lenght);
+            var btn=this;
+            document.onmousemove=function(e){
+                if(Isclick)
+                {
+                    var thisX=(e||window.event).clientX;//当前移动位置的X轴长度值
+                    var golenght=Math.min(maxlenght,Math.max(0,lenght+(thisX-x)));//移动的长度
+                    var leftVal=(golenght/maxwidth)*100;
+                    btn.style.left=leftVal+"%";//使用百分比
+                    smallbar.style.left=btn.style.left;
+                    smallwidth();
+                    price(minP,leftVal);
+                }
+                else
+                {
+                    return false;
+                }
+                //window.getSelection ? window.getSelection.removeAllRanges : document.selection.empty;//判定是否有选中项
+            }
+            document.onmouseup=window.onblur=btn.onlosecapture=function()
+            {
+                Isclick=false;
+                btn.releaseCapture && btn.releaseCapture();
+            };
+            this.setCapture && this.setCapture();
+            return false;
+        }
+        arrbtn[1].onmousedown=function(e){
+            Isclick=true;
+            this.style.zIndex=++zindex;
+            var x=(e||window.event).clientX;
+            var lenght=this.offsetLeft+(this.offsetWidth/2-1);
+            var btn1lenght=arrbtn[0].offsetLeft+(arrbtn[0].offsetWidth/2-1);
+            var minlenght=Math.max(0,btn1lenght);
+            var btn1=this;
+            document.onmousemove=function(e){
+                if(Isclick)
+                {
+                    var thisX=(e||window.event).clientX;
+                    var golenght=Math.max(minlenght,Math.min(maxwidth,lenght+(thisX-x)));
+                    var leftVal=(golenght/maxwidth)*100;
+                    btn1.style.left=leftVal+"%";
+                    smallwidth();
+                    price(maxP,leftVal);
+                }
+                else
+                {
+                    return false;
+                }
+                //window.getSelection ? window.getSelection.removeAllRanges : document.selection.empty;
+            }
+            document.onmouseup=window.onblur=btn1.onlosecapture=function()
+            {
+                Isclick=false;
+                btn1.releaseCapture && btn1.releaseCapture();
+            };
+            this.setCapture && this.setCapture();
+            return false;
+        }
+        function smallwidth(){
+            var left=parseFloat(arrbtn[0].style.left);
+            var right=parseFloat(arrbtn[1].style.left);
+            smallbar.style.width=(right-left>0?Math.floor(right-left):0)+"%";
+        }
+        function price(obj,leftVal){
+            var p=parseInt((total/100)*leftVal)+minprice;
+            if(p>minprice && p<maxprice){p=p%5>3?p+(5-(p%5)):p-(p%5)}
+            obj.innerHTML=p+"元";
+        }
+    }
+</script>
+</html>
+<br><br><br><br> <br><hr><p align="center"><font color=black>本特效由 <a href="http://www.CsrCode.cn" target="_blank">芯晴网页特效</a>丨CsrCode.Cn 收集于互联网，只为兴趣与学习交流，不作商业用途。</font></p>

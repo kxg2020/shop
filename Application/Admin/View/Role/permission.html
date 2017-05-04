@@ -1,0 +1,49 @@
+<extend name="Public:base" />
+<!-- page heading start-->
+<block name="content">
+<div class="page-heading">
+    <h3>
+        管理首页
+    </h3>
+    <ul class="breadcrumb">
+        <li>
+            <a href="#">管理后台</a>
+        </li>
+        <li> 角色管理 </li>
+        <li class="active"> 权限 </li>
+    </ul>
+</div>
+<!-- page heading end-->
+
+<!--body wrapper start-->
+<section class="wrapper">
+    <!-- page start-->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <section class="panel">
+                <header class="panel-heading">
+                    权限
+                </header>
+                <div class="panel-body">
+                    <form role="form" action="{:U('permission', ['id' => $info['id']])}" method="post">
+                        <div class="form-group">
+                            <label>角色名称</label>
+                            <span class="text-danger"><b>{$info.role_name}</b></span>
+                        </div>
+                        <div class="form-group">
+                            <label>权限列表</label><br/>
+                            <volist name="pers" id="p">
+                                <for start="1" end="$p['level']">&nbsp;&nbsp;</for>
+                                <input type="checkbox" <if condition="in_array($p['id'], $permissions)">checked</if> name="p[]" value="{$p.id}" />{$p.name}<br/>
+                            </volist>
+                        </div>
+                        <button type="submit" class="btn btn-primary">提交新增</button>
+                    </form>
+
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+</block>

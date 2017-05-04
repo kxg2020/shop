@@ -1,0 +1,105 @@
+[ 2016-08-30T09:18:30+08:00 ] 127.0.0.1 /Login/sendsms.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-08-30T09:33:24+08:00 ] 127.0.0.1 /Login/sendsms.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-08-30T09:34:34+08:00 ] 127.0.0.1 /Login/sendsms.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-08-30T09:52:24+08:00 ] 127.0.0.1 /Login/sendsms.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-08-30T09:53:17+08:00 ] 127.0.0.1 /Login/sendsms.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 1103:Incorrect table name ''
+ [ SQL语句 ] : select `cachekey` from `` where `cachekey`='code_18284516260' limit 0,1
+ERR: 1103:Incorrect table name ''
+ [ SQL语句 ] : select `cachekey` from `` where `cachekey`='code_18284516260' limit 0,1
+
+[ 2016-08-30T09:54:43+08:00 ] 127.0.0.1 /Login/sendsms.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 1103:Incorrect table name ''
+ [ SQL语句 ] : select `cachekey` from `` where `cachekey`='code_18284516260' limit 0,1
+ERR: 1103:Incorrect table name ''
+ [ SQL语句 ] : select `cachekey` from `` where `cachekey`='code_18284516260' limit 0,1
+
+[ 2016-08-30T09:55:00+08:00 ] 127.0.0.1 /Login/regist.html
+ERR: 1103:Incorrect table name ''
+ [ SQL语句 ] : SELECT `data`,`datacrc` FROM `` WHERE `cachekey`='code_18284516260' AND (`expire` =0 OR `expire`>1472522099) LIMIT 0,1
+
+[ 2016-08-30T09:55:48+08:00 ] 127.0.0.1 /Login/regist.html
+ERR: 1146:Table 'shop.cache' doesn't exist
+ [ SQL语句 ] : SELECT `data`,`datacrc` FROM `cache` WHERE `cachekey`='code_18284516260' AND (`expire` =0 OR `expire`>1472522147) LIMIT 0,1
+
+[ 2016-08-30T09:56:09+08:00 ] 127.0.0.1 /Login/sendsms.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: select `cachekey` from `shop_cache` where `cachekey`='code_18284516260' limit 0,1 [ RunTime:0.0000s ]
+SQL: INSERT INTO shop_cache (`cachekey`,`data`,`datacrc`,`expire`) VALUES ('code_18284516260','i:2282;','',1472522468) [ RunTime:0.0080s ]
+
+[ 2016-08-30T10:20:54+08:00 ] 127.0.0.1 /Login/sendsms.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 系统不支持:memcache
+
+[ 2016-08-30T10:21:06+08:00 ] 127.0.0.1 /Login/regist.html
+ERR: 系统不支持:memcache
+
+[ 2016-08-30T10:33:10+08:00 ] 127.0.0.1 /Login/sendsms.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-08-30T10:37:37+08:00 ] 127.0.0.1 /Login/sendsms.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-08-30T10:37:58+08:00 ] 127.0.0.1 /Login/index.html
+ERR: 非法操作:index
+
+[ 2016-08-30T11:12:25+08:00 ] 127.0.0.1 /Login/index.html
+ERR: 非法操作:index
+
+[ 2016-08-30T14:44:38+08:00 ] 127.0.0.1 //Login/activation/token/9a1158154dfa42caddbd0694a4e9bdc8f9ab16852d455ce9203da64f4fc7f92d34c9b551758c51968fbe1dcecb24eefe5502d041.html
+ERR: 非法操作:activation
+
+[ 2016-08-30T14:46:26+08:00 ] 127.0.0.1 /Login/sendsms.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-08-30T14:47:12+08:00 ] 127.0.0.1 //Login/activation/token/3621f1454cacf995530ea53652ddf8fb4ffbd5c8221d7c147f8363ccdc9a2a37f3da1db29d9021d2ac41a03b7eaf588fd68b78ee.html
+ERR: 非法操作:activation
+
+[ 2016-08-30T15:11:15+08:00 ] 127.0.0.1 /Login/sendsms.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-08-30T15:24:49+08:00 ] 127.0.0.1 /Login/sendsms.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-08-30T15:27:24+08:00 ] 127.0.0.1 /Login/index.html
+ERR: 非法操作:index
+
+[ 2016-08-30T15:36:16+08:00 ] 127.0.0.1 /Login/index.html
+ERR: 非法操作:index
+
